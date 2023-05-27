@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&family=Satisfy&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.font-satisfy{
+    font-family: 'Satisfy', cursive !important;
+}
+.font-nunito{
+    font-family: 'Nunito', sans-serif !important;
+}
+body{
+    font-family: 'Nunito', sans-serif;
+    overflow-x: hidden;
+}
+.home, section{
+    background-image: url('./assets/bg-home.jpg');
+    /* background-repeat: repeat-y; */
+    background-size: cover;
+    background-attachment: fixed;
+}
+.home::after{
+    content: '';
+    position: absolute;
+    bottom: -280px;
+    left: 0;
+    right: -20px;
+    width: 150vw;
+    height: 400px;
+    rotate: 174deg;
+    background-color: #fff;
+    display: grid;
+}
