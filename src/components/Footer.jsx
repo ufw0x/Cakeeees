@@ -4,36 +4,44 @@ import {
   RiWhatsappFill,
   RiYoutubeFill,
 } from "react-icons/ri";
-import { map } from "../constants/constants";
+
 
 const Footer = () => {
   return (
-    <footer className="flex flex-col justify-center items-center p-10 text-center bg-transparent backdrop-blur-lg">
-      <h1 className="w-full text-rose-500 py-4 text-3xl font-bold text-center">
-        Happy Customer brings a happy day.
+    <footer className="bg-white py-10">
+    <div className="flex flex-col items-center">
+      <h1 className="text-4xl font-bold text-black py-4 text-center mb-6">
+        Happy Customers Bring Joyful Days!
       </h1>
-      <div className="flex flex-col justify-center items-center p-10">
-      <img src={map} alt="Location in a map" className="w-[300px]" />
-      <address className="text-rose-500 font-bold pt-4">121/2, Lotus Street, Colombo</address>
-    </div>
-      <div className="flex flex-row flex-wrap justify-center lg:justify-between text-center items-center w-full text-rose-500 font-bold">
-        <div>
-          Contact US: <a className="text-black" href="#">010128109201902</a>
+      <div className="flex flex-wrap justify-center items-center mb-8">
+        <div className="flex flex-col items-center mr-10 mb-6">
+        <p className="text-rose-600 font-bold pt-6 mb-2">Address:</p>
+          <address className="text-black text-center">
+            121/2, Lotus Street, Colombo
+          </address>
         </div>
-        <div>
-          Email US:{" "}
-          <a className="text-black"  href="mailto:byteblazedev@gmail.com">cakeeees@clero.tech</a>
+        <div className="flex flex-col items-center">
+          <p className="text-rose-600 font-bold mb-2">Contact Us:</p>
+          <a className="text-black" href="#">010128109201902</a>
         </div>
-
-        <div className="flex flex-row text-5xl px-4 text-rose-500">
-          <a href="#"><RiFacebookCircleFill /></a>
-          <a href="#"><RiYoutubeFill /></a>
-          <a href="#"><RiInstagramFill /></a>
-         <a href="#"> <RiWhatsappFill /></a>
+        <div className="flex flex-col items-center ml-10">
+          <p className="text-rose-600 font-bold mb-2">Email Us:</p>
+          <a className="text-black" href="mailto:cakeeees@clero.tech">cakeeees@clero.tech</a>
         </div>
       </div>
-      <p className="text-ceter pt-10">&copy; {new Date().getFullYear()} All rights reserved by <a className="text-rose-500 font-bold" href="https://github.com/clerov">Sithika Dangampala</a></p>
-    </footer>
+      <div className="flex space-x-8 text-5xl mb-10">
+        <a href="#"><RiFacebookCircleFill  className="text-rose-600"/></a>
+        <a href="#"><RiYoutubeFill  className="text-rose-600"/></a>
+        <a href="#"><RiInstagramFill  className="text-rose-600" /></a>
+        <a href="#"><RiWhatsappFill  className="text-rose-600"/></a>
+      </div>
+    </div>
+    <p className="text-center text-black font-bold">
+      &copy; {new Date().getFullYear()} All rights reserved by{" "}
+      <a className="text-rose-600 font-bold" href="https://github.com/clerov">Sithika Dangampala</a>
+    </p>
+  </footer>
+  
   );
 };
 

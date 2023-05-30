@@ -1,6 +1,8 @@
 import { BsFillCartPlusFill } from "react-icons/bs";
 import { MdOutlineAttachMoney } from "react-icons/md";
 import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { useState } from "react";
 import PropTypes from "prop-types";
 
@@ -33,7 +35,7 @@ const ProductCard = ({ image, price, name }) => {
             <AiOutlinePlus
               className="mt-1 mx-2 border-2 border-rose-500 rounded-2xl"
               role="button"
-              onClick={() => setQuantity((q) => q + 1)}
+              onClick={() => {setQuantity((q) => q + 1)}}
             />
           </h3>
 
@@ -41,6 +43,9 @@ const ProductCard = ({ image, price, name }) => {
             role="button"
             onClick={() => {
               localStorage.setItem(name, quantity);
+              toast.success('Added Items to Cart', {
+                position: toast.POSITION.TOP_RIGHT,
+            });
             }}
           />
         </div>
