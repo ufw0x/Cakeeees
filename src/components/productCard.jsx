@@ -7,7 +7,7 @@ import { useState } from "react";
 import PropTypes from "prop-types";
 
 const ProductCard = ({ image, price, name }) => {
-  const [quantity, setQuantity] = useState(1);
+  const [quantity, setQuantity] = useState(0);
 
   return (
     <>
@@ -42,10 +42,17 @@ const ProductCard = ({ image, price, name }) => {
           <BsFillCartPlusFill
             role="button"
             onClick={() => {
+              if(quantity==0){
+                toast.error('Quantity cannot be 0', {
+                  position: toast.POSITION.TOP_RIGHT,
+              });
+              return 
+              }
               localStorage.setItem(name, quantity);
               toast.success('Added Items to Cart', {
                 position: toast.POSITION.TOP_RIGHT,
             });
+            setQuantity(0)
             }}
           />
         </div>
