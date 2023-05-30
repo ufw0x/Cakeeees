@@ -1,4 +1,4 @@
-import cakes from '../constants/products'
+import {cakes} from '../constants/constants'
 import Title from './Title';
 import ProductCard from './productCard';
 
