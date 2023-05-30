@@ -24,16 +24,16 @@ const ProductCard = ({ image, price, name }) => {
             <MdOutlineAttachMoney className="mt-1" />
           </h1>
           <h3 className="flex flex-row">
-            <AiOutlinePlus
-              className="mt-1 mx-2 border-2 border-rose-500 rounded-2xl"
-              role="button"
-              onClick={() => setQuantity((q) => q + 1)}
-            />
-            {quantity}
             <AiOutlineMinus
               className="mt-1 mx-2  border-2 border-rose-500 rounded-3xl text-lg"
               role="button"
               onClick={() => setQuantity((q) => (q === 0 ? 0 : q - 1))}
+            />
+            {quantity}
+            <AiOutlinePlus
+              className="mt-1 mx-2 border-2 border-rose-500 rounded-2xl"
+              role="button"
+              onClick={() => setQuantity((q) => q + 1)}
             />
           </h3>
 
