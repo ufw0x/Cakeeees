@@ -4,6 +4,7 @@ import Home from "./components/Home";
 import ProductList from "./components/ProductList";
 import About from "./components/About";
 import Testimonials from "./components/Testimonials";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
       <About />
       <ProductList />
       <Testimonials />
+      <Footer/>
     </React.Fragment>
   );
 };

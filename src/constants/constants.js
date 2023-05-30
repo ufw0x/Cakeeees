@@ -9,6 +9,7 @@ import cake_8 from "../assets/cakes/8.jpg";
 import cake_9 from "../assets/cakes/9.jpg";
 import alex from "../assets/people/alex.jpg";
 import ricky from "../assets/people/ricky.jpg";
+import map from '../assets/map.png'
 
 const cakes = [
   {
@@ -75,4 +76,4 @@ const persons = [
   },
 ];
 
-export {cakes, persons}
+export {cakes, persons, map}
