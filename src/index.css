@@ -12,9 +12,7 @@
 body{
     font-family: 'Nunito', sans-serif;
     overflow-x: hidden;
-}
-.home, section{
-    background-image: url('./assets/bg-home.jpg');
+    background-image: url('./assets/background.jpg');
     /* background-repeat: repeat-y; */
     background-size: cover;
     background-attachment: fixed;
@@ -30,4 +28,5 @@ body{
     rotate: 174deg;
     background-color: #fff;
     display: grid;
+    z-index: 10;
 }
