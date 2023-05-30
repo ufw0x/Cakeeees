@@ -71,7 +71,7 @@ const persons = [
     image: ricky,
     pos: "lg:flex-row-reverse flex-col-reverse",
     img_pos:'lg:right-28',
-    quote: `Cakeees has a wide selection of cakes to suit all tastes and preferences. Everyone could find something they liked, from traditional flavors like chocolate and vanilla to more inventive ones. The cakes were exquisitely created with intricate motifs, displaying the {"bakers'"} talent and originality.`,
+    quote: `Cakeees has a wide selection of cakes to suit all tastes and preferences. Everyone could find something they liked, from traditional flavors like chocolate and vanilla to more inventive ones. The cakes were exquisitely created with intricate motifs, displaying the bakers' talent and originality.`,
   },
 ];
 
