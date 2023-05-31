@@ -17,7 +17,7 @@ const Cart = ({ showCart }) => {
   const cart = getData();
   return (
     <>
-      <aside className="w-full overflow-y-visible h-auto min-h-screen max-h-screen bg-[#ffffff6d] backdrop-blur-2xl fixed top-0 left-0 z-50">
+      <aside className="w-full overflow-y-scroll h-auto max-h-screen bg-[#ffffff6d] backdrop-blur-2xl fixed top-0 left-0 z-50">
         <MdClose
           className="float-right m-10 text-3xl"
           role="button"
@@ -31,7 +31,7 @@ const Cart = ({ showCart }) => {
             <h3 className="text-2xl font-bold text-rose-500 my-10">
               Your Shopping Cart
             </h3>
-            <div className="overflow-y-auto">
+            <div className="overflow-y-scroll">
               <table className="flex flex-col py-10 justify-center space-y-8 mx-auto text-center items-center">
                 <tr className="flex flex-row space-x-16 text-center justify-between">
                   <th>Image</th>
