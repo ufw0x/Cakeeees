@@ -23,6 +23,7 @@ const Cart = ({ showCart }) => {
           role="button"
           onClick={() => {
             showCart(false);
+            document.body.style.overflowY = "unset"
           }}
         />
         {cart.length > 0 ? (
@@ -67,6 +68,7 @@ const Cart = ({ showCart }) => {
                   position: toast.POSITION.TOP_RIGHT,
                 });
                 showCart(false)
+                document.body.style.overflowY = "unset"
               }}
             >
               Clear
@@ -79,6 +81,7 @@ const Cart = ({ showCart }) => {
                   position: toast.POSITION.TOP_RIGHT,
                 });
                 showCart(false)
+                document.body.style.overflowY = "unset"
               }}
             >
               Submit
