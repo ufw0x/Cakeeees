@@ -26,7 +26,7 @@ const Footer = () => {
         </div>
         <div className="flex flex-col items-center">
           <p className="text-rose-600 font-bold mb-2">Email Us:</p>
-          <a className="text-black" href="mailto:cakeeees@clero.tech">cakeeees@clero.tech</a>
+          <a className="text-black" href="#">cakeeees@clero.tech</a>
         </div>
       </div>
       <div className="flex space-x-8 text-5xl mb-10">
