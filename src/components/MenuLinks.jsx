@@ -9,8 +9,10 @@ const MenuLinks = ({setStatus}) => {
                 Home
               </a>
               <a href="#shop" className="hover:text-rose-500" onClick={(e)=>{
+                  e.preventDefault()
                   document.body.style.overflowY = "unset"
                   setStatus(false)
+                  location.href = "#shop"
               }}>
                 Cakes
               </a>
