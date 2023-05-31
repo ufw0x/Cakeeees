@@ -17,13 +17,12 @@ const Cart = ({ showCart }) => {
   const cart = getData();
   return (
     <>
-      <aside className="w-full overflow-y-scroll h-auto max-h-screen bg-[#ffffff6d] backdrop-blur-2xl fixed top-0 left-0 z-50">
+      <aside className="w-full h-full min-h-screen max-h-screen bg-[#ffffff6d] backdrop-blur-2xl fixed top-0 left-0 z-50">
         <MdClose
           className="float-right m-10 text-3xl"
           role="button"
           onClick={() => {
             showCart(false);
-            document.body.style.overflowY = "unset";
           }}
         />
         {cart.length > 0 ? (
@@ -31,59 +30,55 @@ const Cart = ({ showCart }) => {
             <h3 className="text-2xl font-bold text-rose-500 my-10">
               Your Shopping Cart
             </h3>
-            <div className="overflow-y-scroll">
-              <table className="flex flex-col py-10 justify-center space-y-8 mx-auto text-center items-center">
-                <tr className="flex flex-row space-x-16 text-center justify-between">
-                  <th>Image</th>
-                  <th>Price</th>
-                  <th>Quantity</th>
-                </tr>
-                {cart.map((c) => (
-                  <>
-                    <tr
-                      key={c.id}
-                      className="flex flex-row space-x-16 text-center justify-between"
-                    >
-                      <td>
-                        <img
-                          src={c.image}
-                          alt={c.name}
-                          className="w-14 rounded-full"
-                        />
-                      </td>
-                      <td>
-                        <h3 className="text-xl">{c.price}$</h3>
-                      </td>
-                      <td>
-                        <h4 className="text-xl">{c.quantity}</h4>
-                      </td>
-                    </tr>
-                  </>
-                ))}
-              </table>
-            </div>
+            <table className=" overflow-y-scroll flex flex-col py-10 justify-center space-y-8 mx-auto text-center items-center">
+              <tr className="flex flex-row space-x-16 text-center justify-between">
+                <th>Image</th>
+                <th>Price</th>
+                <th>Quantity</th>
+              </tr>
+              {cart.map((c) => (
+                <>
+                  <tr
+                    key={c.id}
+                    className="flex flex-row justify-between space-x-20"
+                  >
+                    <td>
+                      <img
+                        src={c.image}
+                        alt={c.name}
+                        className="w-14 rounded-full"
+                      />
+                    </td>
+                    <td>
+                      <h3 className="text-xl">{c.price}$</h3>
+                    </td>
+                    <td>
+                      <h4 className="text-xl">{c.quantity}</h4>
+                    </td>
+                  </tr>
+                </>
+              ))}
+            </table>
             <button
-              className="w-20 h-10 border-2 border-rose-500 text-rose-500 rounded-md fixed bottom-10 left-10 z-50"
+              className="w-20 h-10  border-2 border-rose-500 text-rose-500 rounded-md absolute bottom-10 left-10"
               onClick={() => {
                 localStorage.clear();
                 toast.success("Your shopping cart cleared successfully", {
                   position: toast.POSITION.TOP_RIGHT,
                 });
-                showCart(false);
-                document.body.style.overflowY = "unset";
+                showCart(false)
               }}
             >
               Clear
             </button>
             <button
-              className="w-20 h-10 border-2 border-rose-500 text-rose-500 rounded-md fixed bottom-0 right-10 z-50"
+              className="w-20 h-10  border-2 border-rose-500 text-rose-500 rounded-md absolute bottom-10 right-10"
               onClick={() => {
                 localStorage.clear();
                 toast.success("Your order is successfull.", {
                   position: toast.POSITION.TOP_RIGHT,
                 });
-                showCart(false);
-                document.body.style.overflowY = "unset";
+                showCart(false)
               }}
             >
               Submit
