@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import { MdShoppingBag, MdMenu } from "react-icons/md";
 import Menu from './Menu'
 import MenuLinks from "./MenuLinks";
+import Cart from './Cart'
 
 const Navbar = () => {
   const [isOpen, setStatus] = useState(false);
+  const [cartOpen , showCart] = useState(false)
   return (
     <React.Fragment>
       <nav className="w-full h-auto px-8 py-6 fixed top-0 left-0 backdrop-blur-xl z-10 bg-[#c8cac74a]">
@@ -16,7 +18,9 @@ const Navbar = () => {
             <MenuLinks/>
           </div>
           <div className="flex flex-row space-x-2 text-3xl pt-1 text-rose-500">
-            <MdShoppingBag role="button" className="text-rose-500" />
+            <MdShoppingBag role="button" className="text-rose-500" onClick={()=>{
+                showCart(true)
+            }} />
             <MdMenu role="button" className="text-black md:hidden" onClick={()=>{
                 document.body.style.overflowY = "hidden"
                 setStatus(true)
@@ -29,6 +33,11 @@ const Navbar = () => {
       ) : (
         ""
       )}
+       {
+        cartOpen?(
+          <Cart showCart={showCart}/>
+        ):""
+       }
     </React.Fragment>
   );
 };

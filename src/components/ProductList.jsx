@@ -12,7 +12,8 @@ const ProductList = () => {
             image={cake.image}
             name={cake.name}
             price={cake.price}
-            key={cake.price}
+            id={cake.id}
+            key={cake.id}
           />
         ))}
       </div>

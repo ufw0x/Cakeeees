@@ -6,7 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useState } from "react";
 import PropTypes from "prop-types";
 
-const ProductCard = ({ image, price, name }) => {
+const ProductCard = ({ image, price, name, id }) => {
   const [quantity, setQuantity] = useState(0);
 
   return (
@@ -48,7 +48,7 @@ const ProductCard = ({ image, price, name }) => {
               });
               return 
               }
-              localStorage.setItem(name, quantity);
+              localStorage.setItem(id, quantity);
               toast.success('Added Items to Cart', {
                 position: toast.POSITION.TOP_RIGHT,
             });
@@ -65,6 +65,7 @@ ProductCard.propTypes = {
   image: PropTypes.string,
   price: PropTypes.number,
   name: PropTypes.string,
+  id: PropTypes.number
 };
 
 export default ProductCard;

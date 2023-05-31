@@ -13,48 +13,57 @@ import ricky from "../assets/people/ricky.jpg";
 const cakes = [
   {
     image: cake_1,
-    name: "Birthday Cake",
+    name: "Birthday Cake 1",
     price: 10,
+    id:1,
   },
   {
     image: cake_2,
-    name: "Birthday Cake",
+    name: "Birthday Cake 2",
     price: 10,
+    id:2,
   },
   {
     image: cake_3,
-    name: "Birthday Cake",
+    name: "Birthday Cake 3",
     price: 10,
+    id:3,
   },
   {
     image: cake_4,
-    name: "Birthday Cake",
+    name: "Birthday Cake 4",
     price: 10,
+    id:4,
   },
   {
     image: cake_5,
-    name: "Birthday Cake",
+    name: "Birthday Cake 5",
     price: 10,
+    id:5,
   },
   {
     image: cake_6,
-    name: "Birthday Cake",
+    name: "Birthday Cake 6",
     price: 10,
+    id:6,
   },
   {
     image: cake_7,
-    name: "Birthday Cake",
+    name: "Birthday Cake 7",
     price: 10,
+    id:7,
   },
   {
     image: cake_8,
-    name: "Birthday Cake",
+    name: "Birthday Cake 8",
     price: 10,
+    id:8,
   },
   {
     image: cake_9,
-    name: "Birthday Cake",
+    name: "Birthday Cake 9",
     price: 10,
+    id:9,
   },
 ];
 
