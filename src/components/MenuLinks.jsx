@@ -6,10 +6,10 @@ const MenuLinks = ({ setStatus }) => {
         href="#home"
         className="hover:text-rose-500 text-rose-500"
         onClick={(e) => {
-          e.preventDefault();
           document.body.style.overflowY = "unset";
           setStatus(false);
           document.querySelector(e.currentTarget.href).scrollIntoView();
+          e.preventDefault();
         }}
       >
         Home
@@ -18,10 +18,10 @@ const MenuLinks = ({ setStatus }) => {
         href="#shop"
         className="hover:text-rose-500"
         onClick={(e) => {
-          e.preventDefault();
           document.body.style.overflowY = "unset";
           setStatus(false);
           document.querySelector(e.currentTarget.href).scrollIntoView();
+          e.preventDefault();
         }}
       >
         Cakes
@@ -30,10 +30,10 @@ const MenuLinks = ({ setStatus }) => {
         href="#testi"
         className="hover:text-rose-500"
         onClick={(e) => {
-          e.preventDefault();
           document.body.style.overflowY = "unset";
           setStatus(false);
           document.querySelector(e.currentTarget.href).scrollIntoView();
+          e.preventDefault();
         }}
       >
         Testimonial
@@ -42,10 +42,10 @@ const MenuLinks = ({ setStatus }) => {
         href="#footer"
         className="hover:text-rose-500"
         onClick={(e) => {
-          e.preventDefault();
           document.body.style.overflowY = "unset";
           setStatus(false);
           document.querySelector(e.currentTarget.href).scrollIntoView();
+          e.preventDefault();
         }}
       >
         Contact
