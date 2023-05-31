@@ -12,7 +12,7 @@ const Menu = ({setStatus}) => {
             }
             }/>
             <div className="flex flex-col justify-center items-center py-20 text-lg  mt-20 px-10 space-y-7">
-              <MenuLinks/>
+              <MenuLinks setStatus={setStatus}/>
             </div>
           </aside>
         </>
