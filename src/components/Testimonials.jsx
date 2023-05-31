@@ -3,7 +3,7 @@ import { persons } from "../constants/constants";
 
 const Testimonials = () => {
   return (
-    <section className="bg-white z-50 py-20 px-[40px] lg:px-[80px]">
+    <section id="testi" className="bg-white z-50 py-20 px-[40px] lg:px-[80px]">
       <Title title="Testimonials" />
       <div className=" text-center lg:text-left">
         {persons.map((person) => (

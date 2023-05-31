@@ -1,16 +1,16 @@
 const MenuLinks = () => {
     return ( 
         <>
-           <a href="" className="hover:text-rose-500 text-rose-500">
+           <a href="#home" className="hover:text-rose-500 text-rose-500">
                 Home
               </a>
-              <a href="" className="hover:text-rose-500">
+              <a href="#shop" className="hover:text-rose-500">
                 Cakes
               </a>
-              <a href="" className="hover:text-rose-500">
+              <a href="#testi" className="hover:text-rose-500">
                 Testimonial
               </a>
-              <a href="" className="hover:text-rose-500">
+              <a href="#footer" className="hover:text-rose-500">
                 Contact
               </a>
         </>
