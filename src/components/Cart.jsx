@@ -1,6 +1,5 @@
 import { MdClose } from "react-icons/md";
 import PropTypes from "prop-types";
-import { useState } from "react";
 import { cakes } from "../constants/constants";
 import { toast } from "react-toastify";
 
@@ -18,12 +17,13 @@ const Cart = ({ showCart }) => {
   const cart = getData();
   return (
     <>
-      <aside className="w-full h-auto min-h-screen bg-[#ffffff6d] backdrop-blur-2xl fixed top-0 left-0 z-50">
+      <aside className="w-full overflow-y-visible h-auto min-h-screen bg-[#ffffff6d] backdrop-blur-2xl fixed top-0 left-0 z-50">
         <MdClose
           className="float-right m-10 text-3xl"
           role="button"
           onClick={() => {
             showCart(false);
+            document.body.style.overflowY = "unset"
           }}
         />
         {cart.length > 0 ? (
@@ -68,18 +68,20 @@ const Cart = ({ showCart }) => {
                   position: toast.POSITION.TOP_RIGHT,
                 });
                 showCart(false)
+                document.body.style.overflowY = "unset"
               }}
             >
               Clear
             </button>
             <button
-              className="w-20 h-10  border-2 border-rose-500 text-rose-500 rounded-md fixed bottom-10 right-10"
+              className="w-20 h-10  border-2 border-rose-500 text-rose-500 rounded-md fixed bottom-0 right-10"
               onClick={() => {
                 localStorage.clear();
                 toast.success("Your order is successfull.", {
                   position: toast.POSITION.TOP_RIGHT,
                 });
                 showCart(false)
+                document.body.style.overflowY = "unset"
               }}
             >
               Submit

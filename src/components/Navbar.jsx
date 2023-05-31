@@ -19,6 +19,7 @@ const Navbar = () => {
           </div>
           <div className="flex flex-row space-x-2 text-3xl pt-1 text-rose-500">
             <MdShoppingBag role="button" className="text-rose-500" onClick={()=>{
+               document.body.style.overflowY = "hidden"
                 showCart(true)
             }} />
             <MdMenu role="button" className="text-black md:hidden" onClick={()=>{
