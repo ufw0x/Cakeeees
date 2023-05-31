@@ -18,7 +18,7 @@ const Cart = ({ showCart }) => {
   const cart = getData();
   return (
     <>
-      <aside className="w-full h-full min-h-screen bg-[#ffffff6d] backdrop-blur-2xl fixed top-0 left-0 z-50">
+      <aside className="w-full h-auto min-h-screen bg-[#ffffff6d] backdrop-blur-2xl fixed top-0 left-0 z-50">
         <MdClose
           className="float-right m-10 text-3xl"
           role="button"
@@ -61,7 +61,7 @@ const Cart = ({ showCart }) => {
               ))}
             </table>
             <button
-              className="w-20 h-10  border-2 border-rose-500 text-rose-500 rounded-md absolute bottom-10 left-10"
+              className="w-20 h-10  border-2 border-rose-500 text-rose-500 rounded-md fixed bottom-10 left-10"
               onClick={() => {
                 localStorage.clear();
                 toast.success("Your shopping cart cleared successfully", {
@@ -73,7 +73,7 @@ const Cart = ({ showCart }) => {
               Clear
             </button>
             <button
-              className="w-20 h-10  border-2 border-rose-500 text-rose-500 rounded-md absolute bottom-10 right-10"
+              className="w-20 h-10  border-2 border-rose-500 text-rose-500 rounded-md fixed bottom-10 right-10"
               onClick={() => {
                 localStorage.clear();
                 toast.success("Your order is successfull.", {
