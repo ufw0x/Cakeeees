@@ -17,7 +17,7 @@ const Cart = ({ showCart }) => {
   const cart = getData();
   return (
     <>
-      <aside className="w-full h-full min-h-screen max-h-screen bg-[#ffffff6d] backdrop-blur-2xl fixed top-0 left-0 z-50">
+      <aside className="overflow-y-scroll w-full h-full min-h-screen max-h-screen bg-[#ffffff6d] backdrop-blur-2xl fixed top-0 left-0 z-50">
         <MdClose
           className="float-right m-10 text-3xl"
           role="button"
@@ -31,7 +31,7 @@ const Cart = ({ showCart }) => {
             <h3 className="text-2xl font-bold text-rose-500 my-10">
               Your Shopping Cart
             </h3>
-            <table className=" overflow-y-scroll flex flex-col py-10 justify-center space-y-8 mx-auto text-center items-center">
+            <table className="flex flex-col py-10 justify-center space-y-8 mx-auto text-center items-center">
               <tr className="flex flex-row space-x-16 text-center justify-between">
                 <th>Image</th>
                 <th>Price</th>
@@ -60,8 +60,9 @@ const Cart = ({ showCart }) => {
                 </>
               ))}
             </table>
+            <div className="flex flex-row justify-between px-10 py-10 flex-wrap">
             <button
-              className="w-20 h-10  border-2 border-rose-500 text-rose-500 rounded-md absolute bottom-10 left-10"
+              className="w-20 h-10  border-2 border-rose-500 text-rose-500 rounded-md "
               onClick={() => {
                 localStorage.clear();
                 toast.success("Your shopping cart cleared successfully", {
@@ -74,7 +75,7 @@ const Cart = ({ showCart }) => {
               Clear
             </button>
             <button
-              className="w-20 h-10  border-2 border-rose-500 text-rose-500 rounded-md absolute bottom-10 right-10"
+              className="w-20 h-10  border-2 border-rose-500 text-rose-500 rounded-md"
               onClick={() => {
                 localStorage.clear();
                 toast.success("Your order is successfull.", {
@@ -86,6 +87,7 @@ const Cart = ({ showCart }) => {
             >
               Submit
             </button>
+            </div>
           </div>
         ) : (
           <div className="flex flex-col justify-center items-center text-3xl text-rose-500 py-20 px-4">
