@@ -6,7 +6,7 @@ import { toast } from "react-toastify";
 const Cart = ({ showCart }) => {
   const getData = () => {
     let arr = [];
-    for (let i = 1; i <= 9; i++) {
+    for (let i = 0; i <= 9; i++) {
       let x = localStorage.getItem(i);
       if (x) {
         arr.push({ ...cakes[i], quantity: x });
