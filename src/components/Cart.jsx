@@ -6,7 +6,7 @@ import { toast } from "react-toastify";
 const Cart = ({ showCart }) => {
   const getData = () => {
     let arr = [];
-    for (let i = 0; i < 10; i++) {
+    for (let i = 1; i <= 9; i++) {
       let x = localStorage.getItem(i);
       if (x) {
         arr.push({ ...cakes[i], quantity: x });
@@ -60,7 +60,7 @@ const Cart = ({ showCart }) => {
                 </>
               ))}
             </table>
-            <div className="flex flex-row justify-between px-10 py-10 flex-wrap">
+            <div className="flex flex-row justify-between px-4 w-full py-10 flex-wrap">
             <button
               className="w-20 h-10  border-2 border-rose-500 text-rose-500 rounded-md "
               onClick={() => {
