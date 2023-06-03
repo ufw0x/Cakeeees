@@ -17,9 +17,9 @@ const Cart = ({ showCart }) => {
   const cart = getData();
   return (
     <>
-      <aside className="overflow-y-scroll w-full h-full min-h-screen max-h-screen bg-[#ffffff6d] backdrop-blur-2xl fixed top-0 left-0 z-50">
+      <aside className="overflow-y-scroll w-full flex flex-col h-full min-h-screen max-h-screen bg-[#ffffff6d] backdrop-blur-2xl fixed top-0 left-0 z-50">
         <MdClose
-          className="float-right m-10 text-3xl"
+          className="m-10 text-3xl absolute right-2 top-2"
           role="button"
           onClick={() => {
             showCart(false);
