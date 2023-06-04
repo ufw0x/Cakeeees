@@ -9,7 +9,7 @@ const Navbar = () => {
   const [cartOpen , showCart] = useState(false)
   return (
     <React.Fragment>
-      <nav className="w-full h-auto px-8 py-6 fixed top-0 left-0 backdrop-blur-xl z-10 bg-[#c8cac74a]">
+      <nav className="w-full h-auto px-8 py-6 fixed top-0 left-0 backdrop-blur-xl z-50 bg-[#c8cac74a]">
         <div className="w-full h-auto flex flex-row justify-between container">
           <h1 className="text-black text-2xl font-bold font-nunito">
             Cake<span className="text-rose-500">ee</span>es
