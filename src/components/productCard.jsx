@@ -11,7 +11,7 @@ const ProductCard = ({ image, price, name, id }) => {
 
   return (
     <>
-      <div className="w-[250px] flex flex-col shadow-md rounded-2xl m-6">
+      <div className="w-[250px] flex flex-col shadow-md hover:shadow-xl rounded-2xl m-6">
         <img
           src={image}
           alt={name}
